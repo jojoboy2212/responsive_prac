@@ -1,0 +1,33 @@
+{% extends "home.html" %}
+{% load static %}
+
+    {% block content %}
+        <div class="postimg">
+            <img src="{{ post.file_upload.url }}" class="detail-img"/>
+            <div class="comment">
+            
+            <div class="comment_box">
+                <div class="comment_icons">
+                    <img src="{% static 'icons.png' %}" width="120px">
+                    <img src="{% static 'mark.png' %}" alt="logo" width="30px">
+                </div>
+                <div class="comment_box__main">
+                    {% for comment in post.comments.all %}
+                    <p>{{ comment.content }}</p> 
+                    {% if user.is_authenticated and post.author == user.username %}
+                    <a href="{% url 'delete_comment' post.pk comment.pk %}"><button class="delete_com">삭제<br></a>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="comment_area">
+                <form method="POST" class="comment_area__form">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" value="게시" />
+                </form>
+            </div>
+        </div>
+        </div>
+        
+    {% endblock %}

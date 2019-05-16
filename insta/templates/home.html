@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fakestagram</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}?v=0.5">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+    <div class="navbar">
+        <div class="nav-left">
+            <a href="/">
+                <img src="{% static 'insta-logo.png' %}" alt="logo" width="120px">
+            </a>
+            
+        </div>
+        <div class="nav-center">
+            <i class="fas fa-search"></i>
+            검색
+        </div>
+        <div class="accounts">
+            {% if user.is_authenticated %}
+            <div class="navitem">
+                <a href="{% url 'logout' %}">로그아웃</a>
+            </div>
+            <a> 안녕하세요. <strong>{{user.username}}</strong>님!</a>
+            {% else %}
+            <div class="navitem">
+                <a href="{% url 'login' %}">로그인</a>
+            </div>
+            <div class="navitem">
+                <a href="{% url 'signup' %}">회원가입</a>
+            </div>
+            
+        {% endif %}
+        </div>
+        <div class="nav-right">
+            <i class="far fa-compass size"></i>
+            <i class="far fa-heart size"></i>
+            <i class="far fa-user size"></i>
+        </div>
+    </div>
+    <div>
+    <div class="profilebox">
+        <div class="profileimg">
+            <img src="https://picsum.photos/150/150/?random" alt="pro" class="circle">
+        </div>
+        <div class="profile">
+            <div class="profiledetail">
+                <div>hyungjae_95</div>
+                <button class="button"><a href="new">게시글 올리기</a></button>
+                <i class="fas fa-cog size"></i>
+            </div>
+            <div class="profiledetail">
+                <div >게시물 <b>10</b></div>
+                <div >팔로워 <b>100M</b></div>
+                <div>팔로우 <b>0</b></div>
+            </div>
+            <div class="profiledetail">JEONG MIN</div>
+        </div>
+    </div>
+    <div class="highlights">
+        <div class="highlight">
+            <div class="highimg">
+                <img src="https://picsum.photos/75/75/?random" alt="high" class="imgcircle">
+            </div>
+            <div class="highcaption">🇨🇷</div>
+        </div>
+        <div class="highlight">
+            <div class="highimg">
+                <img src="https://picsum.photos/75/75/?random" alt="high" class="imgcircle">
+            </div>
+            <div class="highcaption">🇨🇳</div>
+        </div>
+        <div class="highblank"></div>
+    </div>
+
+
+<!-- 위에 부분은 고정 -->
+<!-- 아래 부분먼저 형제 수정하고 위로 올라갈 예정 -->
+{% block content %}
+    <div class="contents">
+        <div class="subnav">
+            <div style="margin-right: 60px">게시물</div>
+            <div style="margin-right: 60px">IGTV</div>
+            <div style="margin-right: 60px">저장됨</div>
+            <div>태그됨</div>
+        </div>
+        <div class="imgs">
+            {% for post in posts %}
+                <div class="instaimg"> 
+                    <a href="{% url 'detail' post.pk %}">
+                    <img src="{{ post.file_upload.url }}" /></a>
+                    
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
+</body>
+
+<!-- div 가이드 - 주석처리 하고 작업해주세요 -->
+<!-- <style>
+    div {
+        border: 2px solid grey;
+        margin: 10px;
+    }    
+    div div {
+        border: 2px solid blue;
+    }    
+    div div div {
+        border: 2px solid hotpink;
+    }
+    div div div div {
+        border: 2px solid orange;
+    }
+    div div div div div {
+        border: 2px solid rgb(194, 78, 194);
+    }
+</style> -->
+
+</html>

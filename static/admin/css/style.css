@@ -1,0 +1,153 @@
+/* 네브바 */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid;
+    border-color: gray;
+    padding-left: 50px;
+    padding-right: 50px;
+    align-items: center;
+    top: 0;
+    height: 60px;
+}
+.nav-left {
+    width: 150px;
+}
+.nav-center {
+    width: 200px;
+    border-radius: 4px;
+    border-color: lightgray;
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    background-color: rgb(245, 245, 245);
+    color:lightgray;
+}
+.nav-right {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-right i {
+    font-size: 20px;
+}
+
+/* 프로필 박스 */
+.profilebox {
+    margin: 50px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+}
+.profileimg {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+}
+.profileimg img {
+    border-radius: 50%;
+    border: 1px solid lightgray;
+}
+.profile {
+    height: 100px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding-right: 100px;
+    justify-content: center;
+}
+.profiledetail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.profiledetail button {
+    width: fit-content;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+/* 메뉴 하이라이트 위치*/
+.highlights {
+    margin: 50px auto;
+    width: 70%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.highlight {
+    width: 83px;
+    margin: 0 25px;
+    display: block;
+}
+
+.highimg {
+    width: 83px;
+    height: 83px;
+    border-radius: 100%;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgcircle {
+    border-radius: 100%;
+    width: 83px;
+    height: 83px;
+}
+
+.highcaption {
+    margin: 0 auto;
+    margin-top: 2%;
+    text-align: center;
+    font-size: 23px;
+}
+
+/* 컨텐츠 */
+.contents {
+    width: 70%;
+    margin: 0 auto;
+    padding: 0;
+    border-top: 1px solid black;
+}
+.subnav {
+    display: flex;
+    margin: 20px auto;
+    width: fit-content;
+    align-content: center;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.imgs {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 20px 0;
+    justify-content: space-evenly;
+
+}
+
+.instaimg {
+    width: 18rem;
+    height: 18rem;
+    margin: 0;
+    margin-bottom: 0.1rem;
+    margin-left: 0.2rem;
+    display: block;
+    padding: 0;
+    margin-right: 2%;
+}
+
+.highblank {
+    width: 300px;
+    padding-right: 100px;
+}

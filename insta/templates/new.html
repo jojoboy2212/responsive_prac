@@ -1,0 +1,56 @@
+{% load static %}
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+
+
+    {% block content %}
+    
+    <div class="navbar">
+        <div class="nav-left">
+            <a href="/">
+                <img src="{% static 'insta-logo.png' %}" alt="logo" width="120px">
+            </a>
+        </div>
+        <div class="nav-center">
+            <i class="fas fa-search"></i>
+            검색
+        </div>
+        <div class="nav-right">
+            <i class="far fa-compass size"></i>
+            <i class="far fa-heart size"></i>
+            <i class="far fa-user size"></i>
+        </div>
+    </div>
+    <div class="newbox">
+    
+        <div class="propic">
+            <div class="profileimg1">
+                <img src="https://picsum.photos/150/150/?random" alt="pro" class="circle">
+            </div>
+            <div class="profiledetail1">
+                <div>hyungjae_95</div>
+            </div>
+        </div>
+        <form method="POST" action='' enctype="multipart/form-data"> {% csrf_token %}
+            {% comment %} {{ form.as_p }}    {% endcomment %}
+            <div class="newform">
+                <p><input type="file" name="file_upload" accept="image/*" class="form_up" required="" id="id_img"></p>
+                <p><input type="text" name="content" class="post" required="" id="id_content"></p>
+
+            </div> 
+        
+
+        
+        
+            <div class="sub_but">
+                <i class="fas fa-chevron-left"></i>
+                <p>
+                    <strong>새 게시물</strong>
+                </p>
+                <button type="submit">공유</button>
+            </div>
+        </form>
+    </div>
+
+
+    {% endblock %}
