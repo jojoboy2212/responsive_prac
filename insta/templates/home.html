@@ -8,12 +8,13 @@
     <title>Fakestagram</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}?v=0.5">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/mobile.css' %}?v=0.5">
 </head>
 <body>
     <div class="navbar">
         <div class="nav-left">
             <a href="/">
-                <img src="{% static 'insta-logo.png' %}" alt="logo" width="120px">
+                <img src="{% static 'insta-logo.png' %}" alt="logo" width="100%">
             </a>
             
         </div>
@@ -46,32 +47,32 @@
     <div>
     <div class="profilebox">
         <div class="profileimg">
-            <img src="https://picsum.photos/150/150/?random" alt="pro" class="circle">
+            <img src="/static/로고.png" alt="pro" class="circle">
         </div>
         <div class="profile">
             <div class="profiledetail">
-                <div>hyungjae_95</div>
-                <button class="button"><a href="new">게시글 올리기</a></button>
+                <div class="proname">hyungjae_95</div>
+                <button class="button"><a href="new">프로필 수정</a></button>
                 <i class="fas fa-cog size"></i>
             </div>
-            <div class="profiledetail">
+            <div class="profiledetail", id="profiledetail1">
                 <div >게시물 <b>10</b></div>
                 <div >팔로워 <b>100M</b></div>
                 <div>팔로우 <b>0</b></div>
             </div>
-            <div class="profiledetail">JEONG MIN</div>
+            <div class="profiledetail">MACKTA</div>
         </div>
     </div>
     <div class="highlights">
         <div class="highlight">
             <div class="highimg">
-                <img src="https://picsum.photos/75/75/?random" alt="high" class="imgcircle">
+                <img src="/static/로고.png" alt="high" class="imgcircle">
             </div>
             <div class="highcaption">🇨🇷</div>
         </div>
         <div class="highlight">
             <div class="highimg">
-                <img src="https://picsum.photos/75/75/?random" alt="high" class="imgcircle">
+                <img src="/static/1.jpg" alt="high" class="imgcircle">
             </div>
             <div class="highcaption">🇨🇳</div>
         </div>

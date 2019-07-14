@@ -1,0 +1,329 @@
+@media (max-width: 375px){
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .navbar {
+        width: 100%;
+        padding: 0;
+    }
+    .nav-right {
+        display: none;
+    }
+}
+
+@media (min-width: 375px) {
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .navbar {
+        width: 100%;
+        padding: 0;
+        font-size: 12px;
+        
+    }
+    .accounts {
+        font-size: 12px;
+    }
+    .nav-left {
+        margin: 3%;
+        width: 30%;
+    }
+    .nav_left img {
+        width: 30%;
+    }
+    .nav-center {
+        display: none;
+    }
+    .accounts {
+        width: 60%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+    }
+    .navitem {
+        margin-right: 2%;
+    }
+    .nav-right {
+        display: none;
+    }
+
+    .profilebox {
+        margin: 3%;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .profile {
+        width: 60%;
+        margin: 3%;
+        padding: 0;
+        padding-right: 5%;
+
+    }
+    .profileimg {
+        width: 10%;
+        width: 100px;
+        height: auto;
+    }
+    .profileimg img {
+        width: 77px;
+        height: 77px;
+    }
+
+    .proname {
+        font-weight: bold;
+    }
+    .contents {
+        width: 100%;
+    }
+    .instaimg {
+        width: 100px;
+        height: 100px;
+    }
+    .instaimg img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .highlights {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .highlight {
+        width: 50px;
+        height: 100px;
+    }
+    .highimg {
+        width: 50px;
+        height: 50px;
+    }
+    .highimg img {
+        width: 50px;
+        height: 50px;
+    }
+    #profiledetail1 {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav-center {
+        display: block;
+        width: 40%;
+        margin-right: 5%;
+        align-items: center;
+        text-align: center;
+
+    }
+    .nav-center i {
+        margin-top: 5%;
+        
+    }
+
+    .profilebox {
+        margin: 5% auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 70%;        
+    }
+    .instaimg {
+        width: 200px;
+        height: 200px;
+    }
+    .instaimg img {
+        width: 200px;
+        height: 200px;
+    }
+    .imgs {
+        margin: 5%;
+        margin-left: 0%;
+    }
+
+    .profilebox {
+        margin: 3%;
+        width: 80%;
+        justify-content: space-between;
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 20px;
+    }
+    .profile {
+        width: 60%;
+        margin: 3%;
+        
+        padding: 0;
+        padding-right: 5%;
+
+    }
+    .profileimg {
+        width: 10%;
+        width: 100px;
+        height: auto;
+    }
+    .profileimg img {
+        width: 100px;
+        height: 100px;
+    }
+    .highlights {
+        margin-left: -8%;
+    }
+}
+
+@media (min-width: 768px) {
+    .nav-center {
+        display: block;
+        width: 40%;
+        margin-right: 5%;
+        align-items: center;
+        text-align: center;
+
+    }
+    .nav-center i {
+        margin-top: 5%;
+        
+    }
+
+    .profilebox {
+        margin: 5% auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 70%;        
+    }
+    .instaimg {
+        width: 200px;
+        height: 200px;
+    }
+    .instaimg img {
+        width: 200px;
+        height: 200px;
+    }
+    .imgs {
+        margin: 5%;
+        margin-left: 0%;
+    }
+
+    .profilebox {
+        margin: 3%;
+        width: 80%;
+        justify-content: space-between;
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 20px;
+    }
+    .profile {
+        width: 60%;
+        margin: 3%;
+        
+        padding: 0;
+        padding-right: 5%;
+
+    }
+    .profileimg {
+        width: 10%;
+        width: 100px;
+        height: auto;
+    }
+    .profileimg img {
+        width: 100px;
+        height: 100px;
+    }
+    .highlights {
+        margin-left: -8%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .nav-center {
+        display: block;
+        width: 40%;
+        margin-right: 5%;
+        align-items: center;
+        text-align: center;
+
+    }
+    .nav-center i {
+        margin-top: 4%;
+        
+        
+    }
+    .nav-right {
+        display: block;
+        margin-right: 10%;
+        margin-left: -10%;
+        width: 20%;
+        justify-content: space-between;
+    }
+    .nav-right i {
+        margin-right: 10%;
+    }
+
+    .profilebox {
+        margin: 5% auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 70%;        
+    }
+    .instaimg {
+        width: 300px;
+        height: 300px;
+    }
+    .instaimg img {
+        width: 300px;
+        height: 300px;
+    }
+    .imgs {
+        margin: 5%;
+        margin-left: 0%;
+    }
+
+    .profilebox {
+        margin: 3%;
+        width: 80%;
+        justify-content: space-between;
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 20px;
+    }
+    .profile {
+        width: 60%;
+        margin: 3%;
+        
+        padding: 0;
+        padding-right: 5%;
+
+    }
+    .profileimg {
+        width: 10%;
+        width: 150px;
+        height: auto;
+    }
+    .profileimg img {
+        width: 150px;
+        height: 150px;
+    }
+    .highlights {
+        margin-left: -14%;
+        height: 120px;
+    }
+    .highlight {
+        width: 77px;
+    }
+
+    .highlights img {
+        width: 77px;
+        height: 77px;
+    }
+    .highimg {
+        width: 77px;
+        height: 77px;
+    }
+}

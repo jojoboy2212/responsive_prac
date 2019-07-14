@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'insta.apps.InstaConfig',
+    'sass_processor'
 ]
 
 MIDDLEWARE = [
@@ -128,14 +129,15 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
-
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 # S3 Storage
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# DEFAULT_FILE_STORAGE = 'static'
 
 # AWS ACCESS
 
-AWS_ACCESS_KEY_ID = secrets['AWS']['ACCESS_KEY_ID']
-AWS_SECRET_ACCESS_KEY = secrets['AWS']['SECRET_ACCESS_KEY']
-AWS_STORAGE_BUCKET_NAME = secrets['AWS']['STORAGE_BUCKET_NAME']
-AWS_S3_SIGNATURE_VERSION = "s3v4"
-AWS_S3_REGION_NAME = 'ap-northeast-2'
+# AWS_ACCESS_KEY_ID = secrets['AWS']['ACCESS_KEY_ID']
+# AWS_SECRET_ACCESS_KEY = secrets['AWS']['SECRET_ACCESS_KEY']
+# AWS_STORAGE_BUCKET_NAME = secrets['AWS']['STORAGE_BUCKET_NAME']
+# AWS_S3_SIGNATURE_VERSION = "s3v4"
+# AWS_S3_REGION_NAME = 'ap-northeast-2'

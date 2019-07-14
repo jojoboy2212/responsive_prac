@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from insta import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,4 +27,4 @@ urlpatterns = [
     path('new/', views.new, name='new'),
     path('detail/<int:post_pk>/', views.detail, name='detail'),
     path('detail/<int:post_pk>/<int:comment_pk>', views.delete_comment, name='delete_comment'),
-]
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

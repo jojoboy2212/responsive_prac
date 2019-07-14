@@ -38,10 +38,9 @@ def detail(request, post_pk):
         form = CommentForm()
 
         return render(request, 'detail.html', { 'post' : post, 'form' : form})
-
+@login_required
 def delete_comment(request, post_pk, comment_pk):
     comment = Comment.objects.get(pk=comment_pk)
-
     comment.delete()
     return redirect('detail', post_pk)
 
